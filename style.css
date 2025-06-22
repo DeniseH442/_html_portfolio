@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #daf015;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.portfolio-link {
+  color: violet;
+  font-size: 24px;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.portfolio-link:hover {
+  color: #ef0303;
+}
+
+header p {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+#about h2,
+#about h3 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+#about h3,
+#about h4 {
+  font-size: 40px;
+  margin: 0;
+}
+
+#about h4 {
+  margin-bottom: 30px;
+}
+
+#about p {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+/* === Image Grid === */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.image-box {
+  flex: 1 1 30%;
+  max-width: 30%;
+  min-width: 280px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: bold;
+  color: yellow;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 11px;
+  color: #ccc;
+  margin-bottom: 15px;
+  padding: 0 5px;
+  line-height: 1.3;
+}
+
+/* === Buttons === */
+.view-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  color: #0468ea;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.view-button:hover {
+  background-color: #d5d5d5;
+  color: #034cb0;
+}
+
+/* === Footer === */
+footer {
+  background-color: #2d3748;
+  color: #f00303;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: yellow;
+  font-size: 24px;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ef0303;
+}
