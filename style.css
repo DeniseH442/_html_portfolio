@@ -193,3 +193,83 @@ footer {
     padding: 15px;
   }
 }
+/* === Contact Section === */
+#contact {
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent for your bg image */
+  border-top: 2px solid #ef0303;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #daf015;
+}
+
+#contact p {
+  font-size: 18px;
+  color: #fffacd;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0468ea;
+  outline: none;
+  box-shadow: 0 0 5px rgba(4, 104, 234, 0.4);
+}
+
+.submit-btn {
+  background-color: #0468ea;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #034cb0;
+}
+
+@media screen and (max-width: 768px) {
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  #contact p {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+

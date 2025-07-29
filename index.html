@@ -6,7 +6,6 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 </head>
 
 <body>
@@ -19,13 +18,12 @@
   </header>
 
   <section id="about">
-    <h2>Hi 👋🏾</h2>
-    <h3>I'm Denise,</h3>
-    <h4>Full Stack Developer</h4>
-    <p>
-      I design and develop experiences that make people's lives simpler through Web and Mobile apps.
-      I work with Figma, JavaScript, Python, React, HTML, and CSS.
-    </p>
+    <div id="typewriter-container">
+      <h2 class="typewriter-line" data-text="Hi 👋🏾"></h2>
+      <h3 class="typewriter-line" data-text="I'm Denise,"></h3>
+      <h4 class="typewriter-line" data-text="Full Stack Developer"></h4>
+      <p class="typewriter-line" data-text="I design and develop experiences that make people's lives simpler through Web and Mobile apps. I work with Figma, JavaScript, Python, React, HTML, and CSS."></p>
+    </div>
 
     <div class="image-row">
       <div class="image-box">
@@ -51,13 +49,63 @@
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="post" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <footer>
-  <div class="social-icons">
-    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-  </div>
-  <p>&copy; 2025 Denise's Portfolio. All rights reserved</p>
-  <script src="script.js"></script>
-</footer>
+    <div class="social-icons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 Denise's Portfolio. All rights reserved</p>
+
+    <!-- Typewriter Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lines = document.querySelectorAll(".typewriter-line");
+        let currentLine = 0;
+
+        function typeLine(lineElement, text, i = 0, callback) {
+          if (i < text.length) {
+            lineElement.textContent += text.charAt(i);
+            setTimeout(() => typeLine(lineElement, text, i + 1, callback), 50);
+          } else if (callback) {
+            setTimeout(callback, 500); // Delay before next line
+          }
+        }
+
+        function startTypingSequence() {
+          if (currentLine < lines.length) {
+            const el = lines[currentLine];
+            const text = el.getAttribute("data-text");
+            typeLine(el, text, 0, () => {
+              currentLine++;
+              startTypingSequence();
+            });
+          }
+        }
+
+        startTypingSequence();
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </footer>
+</body>
+</html>
